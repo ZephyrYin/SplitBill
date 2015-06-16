@@ -9,9 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var sB:SplitBill = SplitBill()
     override func viewDidLoad() {
         super.viewDidLoad()
+        var test:[Float] = [3.4, 5.6, 10.1]
+        sB.SetOriginalPrice(test)
+        sB.SetTaxRate(0.0875)
+        sB.PrintOriginalPrice()
+        sB.Split()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

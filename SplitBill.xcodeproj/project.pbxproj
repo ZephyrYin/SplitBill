@@ -13,6 +13,7 @@
 		CE1FE8551B2FE33300DC0F22 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FE8541B2FE33300DC0F22 /* Images.xcassets */; };
 		CE1FE8581B2FE33300DC0F22 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */; };
 		CE1FE8641B2FE33300DC0F22 /* SplitBillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE8631B2FE33300DC0F22 /* SplitBillTests.swift */; };
+		CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		CE1FE85D1B2FE33300DC0F22 /* SplitBillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitBillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1FE8621B2FE33300DC0F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1FE8631B2FE33300DC0F22 /* SplitBillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBillTests.swift; sourceTree = "<group>"; };
+		CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitBill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				CE1FE84D1B2FE33300DC0F22 /* AppDelegate.swift */,
 				CE1FE84F1B2FE33300DC0F22 /* ViewController.swift */,
 				CE1FE8511B2FE33300DC0F22 /* Main.storyboard */,
+				CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */,
 				CE1FE8541B2FE33300DC0F22 /* Images.xcassets */,
 				CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */,
 				CE1FE84B1B2FE33300DC0F22 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1FE8501B2FE33300DC0F22 /* ViewController.swift in Sources */,
+				CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */,
 				CE1FE84E1B2FE33300DC0F22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
