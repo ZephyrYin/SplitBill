@@ -7,24 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, G8TesseractDelegate {
     var sB:SplitBill = SplitBill()
+    var sC:ScanBill = ScanBill()
     override func viewDidLoad() {
         super.viewDidLoad()
-        var tesseract:G8Tesseract = G8Tesseract(language:"eng");
-        tesseract.delegate = self;
-        //tesseract.charWhitelist = "01234567890";
-        tesseract.image = UIImage(named: "Images/receipt.jpeg");
-        tesseract.recognize();
         
-        NSLog("%@", tesseract.recognizedText);
+//        let captureSession = AVCaptureSession()
+//        captureSession.sessionPreset = AVCaptureSessionPresetLow
+//        let devices = AVCaptureDevice.devices()
+//        println(devices)
         
-        var test:[Float] = [3.4, 5.6, 10.1]
-        sB.SetOriginalPrice(test)
-        sB.SetTaxRate(0.0875)
-        sB.PrintOriginalPrice()
-        sB.Split()
+        var billImg:UIImage = UIImage(named: "Images/food3.png")!
+        sC.getPriceFromImg(billImg)
+        
+        
+//        var test:[Float] = [3.4, 5.6, 10.1]
+//        sB.SetOriginalPrice(test)
+//        sB.SetTaxRate(0.0875)
+//        sB.PrintOriginalPrice()
+//        sB.Split()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

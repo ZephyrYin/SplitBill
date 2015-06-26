@@ -16,6 +16,7 @@
 		CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */; };
 		CECD3A451B3BDB3600C5A283 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A441B3BDB3600C5A283 /* tessdata */; };
 		CECD3A471B3BDC1D00C5A283 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A461B3BDC1D00C5A283 /* Images */; };
+		CECE5BF81B3D01F1004697A8 /* ScanBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5BF71B3D01F1004697A8 /* ScanBill.swift */; };
 		E12DB3CB4C2127083B5FD0DB /* libPods-SplitBill.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C04DC240E04EB7FFA79EE757 /* libPods-SplitBill.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		CECD3A401B3BDA1F00C5A283 /* SplitBill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitBill-Bridging-Header.h"; sourceTree = "<group>"; };
 		CECD3A441B3BDB3600C5A283 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		CECD3A461B3BDC1D00C5A283 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		CECE5BF71B3D01F1004697A8 /* ScanBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanBill.swift; sourceTree = "<group>"; };
 		E5626467CDF9A7BA505A9B13 /* Pods-SplitBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitBill/Pods-SplitBill.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				CE1FE84D1B2FE33300DC0F22 /* AppDelegate.swift */,
 				CE1FE84F1B2FE33300DC0F22 /* ViewController.swift */,
 				CE1FE8511B2FE33300DC0F22 /* Main.storyboard */,
+				CECE5BF71B3D01F1004697A8 /* ScanBill.swift */,
 				CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */,
 				CE1FE8541B2FE33300DC0F22 /* Images.xcassets */,
 				CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */,
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1FE8501B2FE33300DC0F22 /* ViewController.swift in Sources */,
+				CECE5BF81B3D01F1004697A8 /* ScanBill.swift in Sources */,
 				CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */,
 				CE1FE84E1B2FE33300DC0F22 /* AppDelegate.swift in Sources */,
 			);
