@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController, G8TesseractDelegate {
     var sB:SplitBill = SplitBill()
-    var sC:ScanBill = ScanBill()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,8 +20,7 @@ class ViewController: UIViewController, G8TesseractDelegate {
 //        let devices = AVCaptureDevice.devices()
 //        println(devices)
         
-        var billImg:UIImage = UIImage(named: "Images/food3.png")!
-        sC.getPriceFromImg(billImg)
+        
         
         
 //        var test:[Float] = [3.4, 5.6, 10.1]
