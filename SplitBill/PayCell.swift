@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class PayCell: UITableViewCell{
-    @IBOutlet var nameText: UILabel!
-    @IBOutlet var offsetText: UILabel!
+    
     @IBOutlet var payText: UILabel!
+    @IBOutlet var detailBtn: UIButton!
+    @IBOutlet var offsetText: UILabel!
 }

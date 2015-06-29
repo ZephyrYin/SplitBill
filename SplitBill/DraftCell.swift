@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class DraftCell : UITableViewCell{
+    
     @IBOutlet var nameText: UITextField!
     @IBOutlet var priceText: UITextField!
 }

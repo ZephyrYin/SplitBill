@@ -9,20 +9,25 @@
 import Foundation
 import UIKit
 
-class DraftBill:UIViewController, UITableViewDataSource, UITableViewDelegate{
+class DraftBillViewController:UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var tableView: UITableView!
+    @IBAction func cancelBtn(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     var sC:ScanBill = ScanBill()
     var billImg:UIImage = UIImage(named: "Images/food3.png")!
     var items:[Item] = [Item]()
     let cellIdentifier = "draftcell"
+    var tipRatio:Float = Float()
     
     override func viewDidLoad(){
         super.viewDidLoad()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+        println("get tip is \(self.tipRatio)")
         items = sC.getPriceFromImg(billImg)
     }
     
@@ -31,9 +36,27 @@ class DraftBill:UIViewController, UITableViewDataSource, UITableViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
-        dismissViewControllerAnimated(true, completion: nil)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "split" {
+            println(" get split action \(self.items.count)")
+            let destinationVC:PayOptionsViewController = segue.destinationViewController as! PayOptionsViewController
+            destinationVC.items = self.items
+        }
     }
+    
+//    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+//        
+//        if identifier == "cancel" {
+//            println("nimade")
+//            dismissViewControllerAnimated(true, completion: nil)
+//        }
+//        return true
+//    }
+    
+//    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
+//        println("cancel")
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

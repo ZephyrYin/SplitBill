@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, G8TesseractDelegate {
-    var sB:SplitBill = SplitBill()
     
     override func viewDidLoad() {
         super.viewDidLoad()

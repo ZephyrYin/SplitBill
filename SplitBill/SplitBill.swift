@@ -9,6 +9,7 @@
 import Foundation
 
 struct Option{
+    var names:[String]
     var originalPrices:[Float]
     var payMoney:[Int]
     
@@ -35,10 +36,12 @@ struct Option{
 class SplitBill:NSObject{
     var orignialPrices:[Float]
     var taxRate:Float
+    var names:[String]
     
     override init(){
         self.orignialPrices = [Float]()
         self.taxRate = 1.0
+        self.names = [String]()
     }
     
     func SetOriginalPrice(prices:[Float]){
@@ -49,11 +52,15 @@ class SplitBill:NSObject{
         self.taxRate = r
     }
     
+    func SetNames(n:[String]){
+        self.names = n
+    }
+    
     func PrintOriginalPrice(){
         println("original prices: \(self.orignialPrices)")
     }
     
-    func Split(){
+    func Split() -> [Option]{
         var shouldPay:[Float] = self.orignialPrices.map{return $0*(1+self.taxRate*2)}
         println(shouldPay)
         var total:Float = shouldPay.reduce(0, combine: +)
@@ -66,6 +73,7 @@ class SplitBill:NSObject{
             print(option.payMoney)
             println("\(option.totalPay) \(option.overFlow)")
         }
+        return Array(options[0...9])
     }
     
     func GetCombinations(shouldPay:[Float]) -> [Option]{
@@ -92,7 +100,7 @@ class SplitBill:NSObject{
         }
         var options:[Option] = [Option]()
         for c in combinations{
-            options.append(Option(originalPrices: shouldPay, payMoney: c))
+            options.append(Option(names: self.names, originalPrices: shouldPay, payMoney: c))
         }
         return options
     }

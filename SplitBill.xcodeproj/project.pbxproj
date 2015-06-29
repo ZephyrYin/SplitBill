@@ -14,14 +14,16 @@
 		CE1FE8581B2FE33300DC0F22 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */; };
 		CE1FE8641B2FE33300DC0F22 /* SplitBillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE8631B2FE33300DC0F22 /* SplitBillTests.swift */; };
 		CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */; };
+		CE3DF1BE1B411C1400FDA788 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */; };
+		CE3DF1C01B411C6000FDA788 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */; };
 		CECD3A451B3BDB3600C5A283 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A441B3BDB3600C5A283 /* tessdata */; };
 		CECD3A471B3BDC1D00C5A283 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A461B3BDC1D00C5A283 /* Images */; };
 		CECE5BF81B3D01F1004697A8 /* ScanBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5BF71B3D01F1004697A8 /* ScanBill.swift */; };
 		CECE5BFD1B3D1AA2004697A8 /* DraftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5BFC1B3D1AA2004697A8 /* DraftCell.swift */; };
-		CECE5C021B3D1CC1004697A8 /* SelectTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5C011B3D1CC1004697A8 /* SelectTip.swift */; };
-		CECE5C041B3D1E16004697A8 /* DraftBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5C031B3D1E16004697A8 /* DraftBill.swift */; };
+		CECE5C021B3D1CC1004697A8 /* SelectTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5C011B3D1CC1004697A8 /* SelectTipViewController.swift */; };
+		CECE5C041B3D1E16004697A8 /* DraftBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5C031B3D1E16004697A8 /* DraftBillViewController.swift */; };
 		CECE5C091B3D2DA4004697A8 /* PayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5C081B3D2DA4004697A8 /* PayCell.swift */; };
-		CECE5C0B1B3D2DF1004697A8 /* PayOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5C0A1B3D2DF1004697A8 /* PayOptions.swift */; };
+		CECE5C0B1B3D2DF1004697A8 /* PayOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5C0A1B3D2DF1004697A8 /* PayOptionsViewController.swift */; };
 		E12DB3CB4C2127083B5FD0DB /* libPods-SplitBill.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C04DC240E04EB7FFA79EE757 /* libPods-SplitBill.a */; };
 /* End PBXBuildFile section */
 
@@ -49,15 +51,17 @@
 		CE1FE8621B2FE33300DC0F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1FE8631B2FE33300DC0F22 /* SplitBillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBillTests.swift; sourceTree = "<group>"; };
 		CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitBill.swift; sourceTree = "<group>"; };
+		CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		CECD3A401B3BDA1F00C5A283 /* SplitBill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitBill-Bridging-Header.h"; sourceTree = "<group>"; };
 		CECD3A441B3BDB3600C5A283 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		CECD3A461B3BDC1D00C5A283 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		CECE5BF71B3D01F1004697A8 /* ScanBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanBill.swift; sourceTree = "<group>"; };
 		CECE5BFC1B3D1AA2004697A8 /* DraftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftCell.swift; sourceTree = "<group>"; };
-		CECE5C011B3D1CC1004697A8 /* SelectTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTip.swift; sourceTree = "<group>"; };
-		CECE5C031B3D1E16004697A8 /* DraftBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftBill.swift; sourceTree = "<group>"; };
+		CECE5C011B3D1CC1004697A8 /* SelectTipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTipViewController.swift; sourceTree = "<group>"; };
+		CECE5C031B3D1E16004697A8 /* DraftBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftBillViewController.swift; sourceTree = "<group>"; };
 		CECE5C081B3D2DA4004697A8 /* PayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayCell.swift; sourceTree = "<group>"; };
-		CECE5C0A1B3D2DF1004697A8 /* PayOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayOptions.swift; sourceTree = "<group>"; };
+		CECE5C0A1B3D2DF1004697A8 /* PayOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayOptionsViewController.swift; sourceTree = "<group>"; };
 		E5626467CDF9A7BA505A9B13 /* Pods-SplitBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitBill/Pods-SplitBill.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,13 +122,15 @@
 				CE1FE84D1B2FE33300DC0F22 /* AppDelegate.swift */,
 				CE1FE84F1B2FE33300DC0F22 /* ViewController.swift */,
 				CE1FE8511B2FE33300DC0F22 /* Main.storyboard */,
+				CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */,
+				CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */,
 				CECE5BF71B3D01F1004697A8 /* ScanBill.swift */,
 				CECE5BFC1B3D1AA2004697A8 /* DraftCell.swift */,
-				CECE5C031B3D1E16004697A8 /* DraftBill.swift */,
-				CECE5C0A1B3D2DF1004697A8 /* PayOptions.swift */,
+				CECE5C031B3D1E16004697A8 /* DraftBillViewController.swift */,
+				CECE5C0A1B3D2DF1004697A8 /* PayOptionsViewController.swift */,
 				CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */,
 				CECE5C081B3D2DA4004697A8 /* PayCell.swift */,
-				CECE5C011B3D1CC1004697A8 /* SelectTip.swift */,
+				CECE5C011B3D1CC1004697A8 /* SelectTipViewController.swift */,
 				CE1FE8541B2FE33300DC0F22 /* Images.xcassets */,
 				CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */,
 				CE1FE84B1B2FE33300DC0F22 /* Supporting Files */,
@@ -303,14 +309,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1FE8501B2FE33300DC0F22 /* ViewController.swift in Sources */,
+				CE3DF1C01B411C6000FDA788 /* DetailCell.swift in Sources */,
 				CECE5BFD1B3D1AA2004697A8 /* DraftCell.swift in Sources */,
 				CECE5C091B3D2DA4004697A8 /* PayCell.swift in Sources */,
 				CECE5BF81B3D01F1004697A8 /* ScanBill.swift in Sources */,
 				CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */,
-				CECE5C041B3D1E16004697A8 /* DraftBill.swift in Sources */,
-				CECE5C0B1B3D2DF1004697A8 /* PayOptions.swift in Sources */,
+				CECE5C041B3D1E16004697A8 /* DraftBillViewController.swift in Sources */,
+				CECE5C0B1B3D2DF1004697A8 /* PayOptionsViewController.swift in Sources */,
 				CE1FE84E1B2FE33300DC0F22 /* AppDelegate.swift in Sources */,
-				CECE5C021B3D1CC1004697A8 /* SelectTip.swift in Sources */,
+				CECE5C021B3D1CC1004697A8 /* SelectTipViewController.swift in Sources */,
+				CE3DF1BE1B411C1400FDA788 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
