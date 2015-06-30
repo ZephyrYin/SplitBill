@@ -11,6 +11,6 @@ import UIKit
 
 class DraftCell : UITableViewCell{
     
-    @IBOutlet var nameText: UITextField!
+    @IBOutlet var nameText: UILabel!
     @IBOutlet var priceText: UITextField!
 }

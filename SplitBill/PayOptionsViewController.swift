@@ -25,7 +25,9 @@ class PayOptionsViewController:UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        
+        for item in self.items{
+            println(item.price)
+        }
         sB.SetNames(items.map({$0.name}))
         sB.SetOriginalPrice(items.map({$0.price}))
         sB.SetTaxRate(0.0875)

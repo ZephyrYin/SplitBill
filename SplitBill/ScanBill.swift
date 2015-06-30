@@ -37,6 +37,6 @@ class ScanBill:NSObject, G8TesseractDelegate{
             var item:Item = Item(name: left, price: (replaced as NSString).floatValue)
             items.append(item)
         }
-        return items.filter({$0.price > 0 && $0.price < 100})
+        return items.filter({$0.price > 0 && $0.price < 7})
     }
 }

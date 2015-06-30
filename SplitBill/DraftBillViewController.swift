@@ -21,14 +21,14 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
     var items:[Item] = [Item]()
     let cellIdentifier = "draftcell"
     var tipRatio:Float = Float()
+    var mycells = [DraftCell]()
     
     override func viewDidLoad(){
         super.viewDidLoad()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        println("get tip is \(self.tipRatio)")
-        items = sC.getPriceFromImg(billImg)
+        self.items = sC.getPriceFromImg(billImg)
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,7 +38,10 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "split" {
-            println(" get split action \(self.items.count)")
+            for cell in self.mycells{
+                self.items[cell.priceText.tag].price = (cell.priceText.text as NSString).floatValue
+            }
+            
             let destinationVC:PayOptionsViewController = segue.destinationViewController as! PayOptionsViewController
             destinationVC.items = self.items
         }
@@ -68,13 +71,17 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DraftCell
+        var index:Int = indexPath.row
         if self.items.count == 0{
             cell.nameText.text = "name"
             cell.priceText.text = "price"
         }else{
-            cell.nameText.text = self.items[indexPath.row].name
-            cell.priceText.text = NSString(format: "%.2f", self.items[indexPath.row].price) as String
+            cell.nameText.text = self.items[index].name
+            cell.priceText.text = NSString(format: "%.2f", self.items[index].price) as String
         }
+        //cell.priceText.delegate = self
+        cell.priceText.tag = index
+        self.mycells.append(cell)
         return cell
     }
     
@@ -90,4 +97,37 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
             // handle delete (by removing the data from your array and updating the tableview)
         }
     }
+    
+//    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+//        println("TextField should begin editing method called")
+//        return true;
+//    }
+    
+//    func textFieldDidBeginEditing(textField: UITextField) {    //delegate method
+//        textField.becomeFirstResponder()
+//    }
+//    
+//    func textFieldShouldClear(textField: UITextField) -> Bool {
+//        println("TextField should clear method called")
+//        return true;
+//    }
+//
+//    
+//    func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
+//        textField.resignFirstResponder()
+//        self.items[textField.tag].price = (textField.text as NSString).floatValue
+//        println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
+//        return true
+//    }
+//    
+//    func textFieldDidEndEditing(textField: UITextField) {
+//        println("TextField did end editing method called")
+//    }
+//
+//    
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
+//        self.items[textField.tag].price = (textField.text as NSString).floatValue
+//        println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
+//        return true
+//    }
 }
