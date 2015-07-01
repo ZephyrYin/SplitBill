@@ -452,10 +452,10 @@
             </objects>
             <point key="canvasLocation" x="840" y="-783"/>
         </scene>
-        <!--View Controller-->
+        <!--Tax Rate View Controller-->
         <scene sceneID="zQT-GH-Iwr">
             <objects>
-                <viewController id="nlN-tc-wRi" sceneMemberID="viewController">
+                <viewController id="nlN-tc-wRi" customClass="TaxRateViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jmc-of-nXK"/>
                         <viewControllerLayoutGuide type="bottom" id="nIs-J7-efY"/>
@@ -468,8 +468,16 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Tax Rate" id="vrl-BK-xkQ">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hUj-8N-NYa"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="od5-aS-dZ6"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hUj-8N-NYa">
+                                            <connections>
+                                                <action selector="cancelBtn:" destination="nlN-tc-wRi" id="eV5-l5-onm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="od5-aS-dZ6">
+                                            <connections>
+                                                <action selector="saveBtn:" destination="nlN-tc-wRi" id="hKp-i7-LXH"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -489,15 +497,18 @@
                             <constraint firstAttribute="centerY" secondItem="eE8-h6-zMY" secondAttribute="centerY" id="VHF-ua-aaP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="taxText" destination="eE8-h6-zMY" id="xYj-Wb-EFE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egw-ws-iy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1437" y="-855"/>
         </scene>
-        <!--View Controller-->
+        <!--Price Filter View Controller-->
         <scene sceneID="Kas-j9-J9e">
             <objects>
-                <viewController id="8Bi-Vl-mpS" sceneMemberID="viewController">
+                <viewController id="8Bi-Vl-mpS" customClass="PriceFilterViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r4l-A6-cKq"/>
                         <viewControllerLayoutGuide type="bottom" id="vpv-tf-5RD"/>
@@ -510,50 +521,60 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Price Filter" id="sQ6-QD-exE">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jsP-5x-Ydm"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bXD-ON-iGN"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jsP-5x-Ydm">
+                                            <connections>
+                                                <action selector="cancelBtn:" destination="8Bi-Vl-mpS" id="hvY-JO-7hl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bXD-ON-iGN">
+                                            <connections>
+                                                <action selector="saveBtn:" destination="8Bi-Vl-mpS" id="zh0-pa-YlB"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqy-pU-ebf">
-                                <rect key="frame" x="101" y="273" width="119.5" height="20.5"/>
+                                <rect key="frame" x="16" y="273" width="119.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-CR-6hr">
-                                <rect key="frame" x="103" y="162" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Minimum Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-CR-6hr">
+                                <rect key="frame" x="16" y="83" width="115" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F1-Hh-WHH">
-                                <rect key="frame" x="112" y="301" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diH-TZ-nVH">
-                                <rect key="frame" x="112" y="191" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-2k-nQi">
+                                <rect key="frame" x="0.0" y="111" width="320" height="162"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHB-yB-r3d">
+                                <rect key="frame" x="0.0" y="301" width="320" height="162"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zHB-yB-r3d" firstAttribute="leading" secondItem="sSa-p8-xVa" secondAttribute="leadingMargin" id="4B6-BV-Gvm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zHB-yB-r3d" secondAttribute="trailing" id="5h7-jD-16Q"/>
+                            <constraint firstItem="vpv-tf-5RD" firstAttribute="top" secondItem="zHB-yB-r3d" secondAttribute="bottom" constant="105" id="CE5-gB-faW"/>
                             <constraint firstItem="ahv-8l-CMm" firstAttribute="width" secondItem="sSa-p8-xVa" secondAttribute="width" id="DDC-SG-8iO"/>
-                            <constraint firstItem="cqy-pU-ebf" firstAttribute="top" secondItem="rFb-CR-6hr" secondAttribute="bottom" constant="90" id="EWh-9V-fN3"/>
-                            <constraint firstAttribute="centerX" secondItem="9F1-Hh-WHH" secondAttribute="centerX" constant="-0.5" id="Fqn-gN-IXt"/>
-                            <constraint firstItem="diH-TZ-nVH" firstAttribute="top" secondItem="rFb-CR-6hr" secondAttribute="bottom" constant="8" id="QOE-Tu-5au"/>
-                            <constraint firstAttribute="centerX" secondItem="rFb-CR-6hr" secondAttribute="centerX" constant="-0.5" id="dHu-K6-sT6"/>
-                            <constraint firstItem="9F1-Hh-WHH" firstAttribute="width" secondItem="cqy-pU-ebf" secondAttribute="width" id="hDH-e3-HG1"/>
-                            <constraint firstItem="9F1-Hh-WHH" firstAttribute="top" secondItem="cqy-pU-ebf" secondAttribute="bottom" constant="7.5" id="n6w-hN-SVU"/>
-                            <constraint firstAttribute="centerX" secondItem="diH-TZ-nVH" secondAttribute="centerX" constant="-0.5" id="pQM-7m-t4T"/>
+                            <constraint firstItem="BlV-2k-nQi" firstAttribute="leading" secondItem="sSa-p8-xVa" secondAttribute="leadingMargin" id="Js3-BW-rVh"/>
+                            <constraint firstItem="zHB-yB-r3d" firstAttribute="top" secondItem="cqy-pU-ebf" secondAttribute="bottom" id="RDt-iN-sne"/>
+                            <constraint firstItem="cqy-pU-ebf" firstAttribute="top" secondItem="BlV-2k-nQi" secondAttribute="bottom" constant="8" id="b8f-HY-lHE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BlV-2k-nQi" secondAttribute="trailing" id="fR9-ak-5m7"/>
+                            <constraint firstItem="rFb-CR-6hr" firstAttribute="top" secondItem="r4l-A6-cKq" secondAttribute="bottom" constant="63" id="g42-8g-n4i"/>
+                            <constraint firstAttribute="centerY" secondItem="cqy-pU-ebf" secondAttribute="centerY" constant="0.75" id="hBH-j8-yYb"/>
+                            <constraint firstItem="BlV-2k-nQi" firstAttribute="top" secondItem="rFb-CR-6hr" secondAttribute="bottom" id="pZh-WG-fN0"/>
                             <constraint firstItem="ahv-8l-CMm" firstAttribute="top" secondItem="r4l-A6-cKq" secondAttribute="bottom" constant="8" id="pdu-rP-e8u"/>
-                            <constraint firstAttribute="centerY" secondItem="cqy-pU-ebf" secondAttribute="centerY" constant="0.5" id="snL-cY-5gR"/>
-                            <constraint firstItem="diH-TZ-nVH" firstAttribute="width" secondItem="rFb-CR-6hr" secondAttribute="width" id="sni-P7-dcI"/>
-                            <constraint firstAttribute="centerX" secondItem="cqy-pU-ebf" secondAttribute="centerX" constant="-0.75" id="t64-yW-gZs"/>
+                            <constraint firstItem="cqy-pU-ebf" firstAttribute="leading" secondItem="sSa-p8-xVa" secondAttribute="leadingMargin" id="xCM-0g-2VR"/>
+                            <constraint firstItem="rFb-CR-6hr" firstAttribute="leading" secondItem="sSa-p8-xVa" secondAttribute="leadingMargin" id="xXp-IC-DLf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="maximumPricePicker" destination="zHB-yB-r3d" id="CcN-fT-wdY"/>
+                        <outlet property="minimumPricePicker" destination="BlV-2k-nQi" id="fap-Oz-qed"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECV-b4-c6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -93,6 +93,7 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             println("delete \(indexPath.row)")
             self.items.removeAtIndex(indexPath.row)
+            self.mycells.removeAtIndex(indexPath.row)
             self.tableView.reloadData()
             // handle delete (by removing the data from your array and updating the tableview)
         }

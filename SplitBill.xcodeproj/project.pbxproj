@@ -16,6 +16,9 @@
 		CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */; };
 		CE3DF1BE1B411C1400FDA788 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */; };
 		CE3DF1C01B411C6000FDA788 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */; };
+		CE5CDD2D1B43D06900C46389 /* PriceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDD2C1B43D06900C46389 /* PriceFilterViewController.swift */; };
+		CE5CDD321B43DA1400C46389 /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDD311B43DA1400C46389 /* Default.swift */; };
+		CE5CDD641B43E58400C46389 /* TaxRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDD631B43E58400C46389 /* TaxRateViewController.swift */; };
 		CECD3A451B3BDB3600C5A283 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A441B3BDB3600C5A283 /* tessdata */; };
 		CECD3A471B3BDC1D00C5A283 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A461B3BDC1D00C5A283 /* Images */; };
 		CECE5BF81B3D01F1004697A8 /* ScanBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5BF71B3D01F1004697A8 /* ScanBill.swift */; };
@@ -53,6 +56,9 @@
 		CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitBill.swift; sourceTree = "<group>"; };
 		CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		CE5CDD2C1B43D06900C46389 /* PriceFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceFilterViewController.swift; sourceTree = "<group>"; };
+		CE5CDD311B43DA1400C46389 /* Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
+		CE5CDD631B43E58400C46389 /* TaxRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxRateViewController.swift; sourceTree = "<group>"; };
 		CECD3A401B3BDA1F00C5A283 /* SplitBill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitBill-Bridging-Header.h"; sourceTree = "<group>"; };
 		CECD3A441B3BDB3600C5A283 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		CECD3A461B3BDC1D00C5A283 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 				CE1FE84D1B2FE33300DC0F22 /* AppDelegate.swift */,
 				CE1FE84F1B2FE33300DC0F22 /* ViewController.swift */,
 				CE1FE8511B2FE33300DC0F22 /* Main.storyboard */,
+				CE5CDD2C1B43D06900C46389 /* PriceFilterViewController.swift */,
 				CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */,
 				CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */,
 				CECE5BF71B3D01F1004697A8 /* ScanBill.swift */,
@@ -130,6 +137,8 @@
 				CECE5C0A1B3D2DF1004697A8 /* PayOptionsViewController.swift */,
 				CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */,
 				CECE5C081B3D2DA4004697A8 /* PayCell.swift */,
+				CE5CDD311B43DA1400C46389 /* Default.swift */,
+				CE5CDD631B43E58400C46389 /* TaxRateViewController.swift */,
 				CECE5C011B3D1CC1004697A8 /* SelectTipViewController.swift */,
 				CE1FE8541B2FE33300DC0F22 /* Images.xcassets */,
 				CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */,
@@ -313,11 +322,14 @@
 				CECE5BFD1B3D1AA2004697A8 /* DraftCell.swift in Sources */,
 				CECE5C091B3D2DA4004697A8 /* PayCell.swift in Sources */,
 				CECE5BF81B3D01F1004697A8 /* ScanBill.swift in Sources */,
+				CE5CDD321B43DA1400C46389 /* Default.swift in Sources */,
 				CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */,
 				CECE5C041B3D1E16004697A8 /* DraftBillViewController.swift in Sources */,
 				CECE5C0B1B3D2DF1004697A8 /* PayOptionsViewController.swift in Sources */,
 				CE1FE84E1B2FE33300DC0F22 /* AppDelegate.swift in Sources */,
 				CECE5C021B3D1CC1004697A8 /* SelectTipViewController.swift in Sources */,
+				CE5CDD2D1B43D06900C46389 /* PriceFilterViewController.swift in Sources */,
+				CE5CDD641B43E58400C46389 /* TaxRateViewController.swift in Sources */,
 				CE3DF1BE1B411C1400FDA788 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
