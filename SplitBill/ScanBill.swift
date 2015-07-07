@@ -21,6 +21,9 @@ class ScanBill:NSObject, G8TesseractDelegate{
     }
     
     func getPriceFromImg(img:UIImage) -> [Item]{
+        var dValue = Default()
+        var minFilterPrice:Int = dValue.GetMinFilterPrice()
+        var maxFilterPrice:Int = dValue.GetMaxFilterPrice()
         self.tesseract.image = img.g8_blackAndWhite()
         self.tesseract.recognize();
         print(self.tesseract.recognizedText)
@@ -34,9 +37,13 @@ class ScanBill:NSObject, G8TesseractDelegate{
             var replaced = String(map(right.generate()) {
                 $0 == "," ? "." : $0
                 })
-            var item:Item = Item(name: left, price: (replaced as NSString).floatValue)
-            items.append(item)
+            var price:Float = (replaced as NSString).floatValue
+            if Int(price) >= minFilterPrice && Int(price) <= maxFilterPrice{
+                var item:Item = Item(name: left, price: (replaced as NSString).floatValue)
+                items.append(item)
+            }
+            
         }
-        return items.filter({$0.price > 0 && $0.price < 7})
+        return items
     }
 }

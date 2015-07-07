@@ -16,10 +16,13 @@ class SelectTipViewController: UIViewController{
     @IBOutlet var tipText: UILabel!
     @IBOutlet var tipSlider: UISlider!
     @IBOutlet var sliderValeLabel: UILabel!
+    var dValue:Default = Default()
     var tipRatio:Float = 0.15
     override func viewDidLoad(){
         super.viewDidLoad()
-        self.tipText.text = "\(tipRatio)%"
+        tipRatio = dValue.GetDefaultTip()
+        self.tipText.text = "\(Int(tipRatio*100))%"
+        self.tipSlider.value = tipRatio*100
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,6 +39,7 @@ class SelectTipViewController: UIViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "settip" {
             println(" get set action \(self.tipRatio)")
+            dValue.SetDefaultTip(self.tipRatio)
             let destinationVC:DraftBillViewController = segue.destinationViewController as! DraftBillViewController
             destinationVC.tipRatio = self.tipRatio
         }

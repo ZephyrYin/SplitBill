@@ -9,15 +9,34 @@
 import Foundation
 
 class Default:NSObject{
+    var tipRatio:Float
     var maxFilterPrice:Int
     var minFilterPrice:Int
     var taxRate:Float
     
     override init(){
+        self.tipRatio = 0.15
         self.maxFilterPrice = 20
         self.minFilterPrice = 5
         self.taxRate = 0.0875
     }
+    
+    
+    func GetDefaultTip() -> Float{
+        if NSUserDefaults.standardUserDefaults().valueForKey("tipRatio") != nil{
+            var tipRatio = NSUserDefaults.standardUserDefaults().valueForKey("tipRatio") as! Float
+            return tipRatio
+        }else{
+            NSUserDefaults.standardUserDefaults().setObject(self.tipRatio, forKey: "tipRatio")
+            return self.tipRatio
+        }
+    }
+    
+    func SetDefaultTip(tipRatio: Float){
+        NSUserDefaults.standardUserDefaults().setObject(tipRatio, forKey: "tipRatio")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
     
     func GetMinFilterPrice() -> Int{
         if NSUserDefaults.standardUserDefaults().valueForKey("minFilterPrice") != nil{

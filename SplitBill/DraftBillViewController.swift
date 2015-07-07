@@ -38,9 +38,9 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "split" {
-            for cell in self.mycells{
-                self.items[cell.priceText.tag].price = (cell.priceText.text as NSString).floatValue
-            }
+//            for cell in self.mycells{
+//                self.items[cell.priceText.tag].price = (cell.priceText.text as NSString).floatValue
+//            }
             
             let destinationVC:PayOptionsViewController = segue.destinationViewController as! PayOptionsViewController
             destinationVC.items = self.items
@@ -94,41 +94,44 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
             println("delete \(indexPath.row)")
             self.items.removeAtIndex(indexPath.row)
             self.mycells.removeAtIndex(indexPath.row)
+//            for(var i:Int = indexPath.row+1;i<self.mycells.count;i++){
+//                self.mycells[i].priceText.tag--
+//            }
             self.tableView.reloadData()
             // handle delete (by removing the data from your array and updating the tableview)
         }
     }
     
-//    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-//        println("TextField should begin editing method called")
-//        return true;
-//    }
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        println("TextField should begin editing method called")
+        return true;
+    }
     
-//    func textFieldDidBeginEditing(textField: UITextField) {    //delegate method
-//        textField.becomeFirstResponder()
-//    }
-//    
-//    func textFieldShouldClear(textField: UITextField) -> Bool {
-//        println("TextField should clear method called")
-//        return true;
-//    }
-//
-//    
-//    func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
-//        textField.resignFirstResponder()
-//        self.items[textField.tag].price = (textField.text as NSString).floatValue
-//        println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
-//        return true
-//    }
-//    
-//    func textFieldDidEndEditing(textField: UITextField) {
-//        println("TextField did end editing method called")
-//    }
-//
-//    
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
-//        self.items[textField.tag].price = (textField.text as NSString).floatValue
-//        println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
-//        return true
-//    }
+    func textFieldDidBeginEditing(textField: UITextField) {    //delegate method
+        textField.becomeFirstResponder()
+    }
+    
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        println("TextField should clear method called")
+        return true;
+    }
+
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
+        textField.resignFirstResponder()
+        self.items[textField.tag].price = (textField.text as NSString).floatValue
+        println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        println("TextField did end editing method called")
+    }
+
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
+        self.items[textField.tag].price = (textField.text as NSString).floatValue
+        println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
+        return true
+    }
 }
