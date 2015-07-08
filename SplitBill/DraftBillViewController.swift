@@ -11,13 +11,14 @@ import UIKit
 
 class DraftBillViewController:UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    
     @IBOutlet var tableView: UITableView!
     @IBAction func cancelBtn(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     var sC:ScanBill = ScanBill()
-    var billImg:UIImage = UIImage(named: "Images/food3.png")!
+    var billImg:UIImage = UIImage()
     var items:[Item] = [Item]()
     let cellIdentifier = "draftcell"
     var tipRatio:Float = Float()
@@ -134,4 +135,6 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
         println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
         return true
     }
+
+
 }

@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--tip-->
@@ -24,14 +25,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-9O-Jc4">
-                                <rect key="frame" x="62" y="237" width="196" height="32"/>
+                                <rect key="frame" x="62" y="237" width="196" height="31"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="mfO-Jk-Z3y" eventType="valueChanged" id="5Ut-0e-a2c"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOz-hZ-WqJ">
-                                <rect key="frame" x="145" y="365" width="30" height="30"/>
-                                <state key="normal" title="Set">
+                                <rect key="frame" x="144" y="422" width="31" height="30"/>
+                                <state key="normal" title="Split">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -39,31 +40,42 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bse-oH-fc9">
-                                <rect key="frame" x="139.5" y="186" width="36.5" height="20.5"/>
+                                <rect key="frame" x="139" y="186" width="36.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppW-uQ-rrv">
+                                <rect key="frame" x="143" y="331" width="35" height="30"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanBtn:" destination="mfO-Jk-Z3y" eventType="touchUpInside" id="V9O-tJ-osL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" label="">
                             <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="bse-oH-fc9" firstAttribute="top" secondItem="fl4-cS-1Hh" secondAttribute="bottom" constant="45.5" id="8Xb-la-XNp"/>
-                            <constraint firstAttribute="centerY" secondItem="dvP-9O-Jc4" secondAttribute="centerY" constant="32" id="Aw9-JD-PP9"/>
-                            <constraint firstAttribute="centerX" secondItem="bse-oH-fc9" secondAttribute="centerX" constant="2.5" id="GY7-IB-6YT"/>
-                            <constraint firstAttribute="centerX" secondItem="dvP-9O-Jc4" secondAttribute="centerX" id="HGz-IP-fqP"/>
-                            <constraint firstItem="dvP-9O-Jc4" firstAttribute="leading" secondItem="gVS-TT-yIq" secondAttribute="leadingMargin" constant="48" id="HxC-vT-eZL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dvP-9O-Jc4" secondAttribute="trailing" constant="32" id="JcA-c0-NHC"/>
-                            <constraint firstAttribute="centerX" secondItem="fl4-cS-1Hh" secondAttribute="centerX" id="KeM-v1-DRt"/>
-                            <constraint firstItem="SbJ-WG-lhj" firstAttribute="top" secondItem="sOz-hZ-WqJ" secondAttribute="bottom" constant="124" id="NZw-9K-0JO"/>
-                            <constraint firstItem="fl4-cS-1Hh" firstAttribute="top" secondItem="WHS-dt-YaO" secondAttribute="bottom" constant="100" id="NlY-91-0P5"/>
-                            <constraint firstAttribute="centerX" secondItem="sOz-hZ-WqJ" secondAttribute="centerX" id="oRY-ZJ-VGr"/>
-                            <constraint firstItem="dvP-9O-Jc4" firstAttribute="top" secondItem="bse-oH-fc9" secondAttribute="bottom" constant="30" id="p2C-xf-eCL"/>
+                            <constraint firstAttribute="centerY" secondItem="dvP-9O-Jc4" secondAttribute="centerY" constant="31.5" id="5Cd-Zd-w40"/>
+                            <constraint firstItem="SbJ-WG-lhj" firstAttribute="top" secondItem="sOz-hZ-WqJ" secondAttribute="bottom" constant="67" id="9Sq-2e-ahJ"/>
+                            <constraint firstAttribute="centerX" secondItem="dvP-9O-Jc4" secondAttribute="centerX" id="JGu-ja-7jf"/>
+                            <constraint firstItem="fl4-cS-1Hh" firstAttribute="top" secondItem="WHS-dt-YaO" secondAttribute="bottom" constant="100" id="JVt-0b-43n"/>
+                            <constraint firstAttribute="centerX" secondItem="ppW-uQ-rrv" secondAttribute="centerX" constant="-0.5" id="OwM-NW-vEV"/>
+                            <constraint firstItem="dvP-9O-Jc4" firstAttribute="width" secondItem="gVS-TT-yIq" secondAttribute="width" multiplier="2:3" id="PPP-G1-MGE"/>
+                            <constraint firstItem="bse-oH-fc9" firstAttribute="top" secondItem="fl4-cS-1Hh" secondAttribute="bottom" constant="45.5" id="Uzg-Mg-7t7"/>
+                            <constraint firstItem="dvP-9O-Jc4" firstAttribute="top" secondItem="bse-oH-fc9" secondAttribute="bottom" constant="30.5" id="VGs-dp-Jvi"/>
+                            <constraint firstItem="sOz-hZ-WqJ" firstAttribute="top" secondItem="ppW-uQ-rrv" secondAttribute="bottom" constant="61" id="W33-El-EIX"/>
+                            <constraint firstItem="ppW-uQ-rrv" firstAttribute="top" secondItem="dvP-9O-Jc4" secondAttribute="bottom" constant="64" id="b1Q-rH-CHg"/>
+                            <constraint firstAttribute="centerX" secondItem="bse-oH-fc9" secondAttribute="centerX" constant="2.25" id="k45-5p-hum"/>
+                            <constraint firstAttribute="centerX" secondItem="fl4-cS-1Hh" secondAttribute="centerX" id="oCO-4W-Exd"/>
+                            <constraint firstAttribute="centerX" secondItem="sOz-hZ-WqJ" secondAttribute="centerX" id="zgc-dt-7TO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tip" id="YIZ-Fb-Iwq"/>
+                    <tabBarItem key="tabBarItem" title="Tip" image="bitcoin.png" id="YIZ-Fb-Iwq"/>
                     <connections>
                         <outlet property="setBtn" destination="sOz-hZ-WqJ" id="tBV-YR-Cbz"/>
                         <outlet property="sliderValeLabel" destination="bse-oH-fc9" id="SqN-RA-KzG"/>
@@ -584,7 +596,7 @@
         <scene sceneID="YEF-kG-XHY">
             <objects>
                 <navigationController title="Setting" automaticallyAdjustsScrollViewInsets="NO" id="kMW-Pa-mjn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" id="0oW-9l-ewV"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="settings.png" id="0oW-9l-ewV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vEc-kq-8CU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -600,6 +612,10 @@
             <point key="canvasLocation" x="308" y="-783"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bitcoin.png" width="25" height="25"/>
+        <image name="settings.png" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

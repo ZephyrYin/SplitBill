@@ -9,15 +9,31 @@
 import Foundation
 import UIKit
 
-class SelectTipViewController: UIViewController{
+class SelectTipViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     @IBOutlet var setBtn: UIButton!
+    
+    @IBAction func scanBtn(sender: AnyObject) {
+        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.cameraCaptureMode = .Photo
+            picker.delegate = self
+            presentViewController(picker, animated: true, completion: nil)
+        } else {
+            noCamera()
+        }
+
+    }
     
     @IBOutlet var tipText: UILabel!
     @IBOutlet var tipSlider: UISlider!
     @IBOutlet var sliderValeLabel: UILabel!
     var dValue:Default = Default()
     var tipRatio:Float = 0.15
+    var billImg:UIImage = UIImage()
+    let picker = UIImagePickerController()
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         tipRatio = dValue.GetDefaultTip()
@@ -38,11 +54,30 @@ class SelectTipViewController: UIViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "settip" {
+           
             println(" get set action \(self.tipRatio)")
             dValue.SetDefaultTip(self.tipRatio)
             let destinationVC:DraftBillViewController = segue.destinationViewController as! DraftBillViewController
             destinationVC.tipRatio = self.tipRatio
+            destinationVC.billImg = self.billImg
         }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        self.billImg = chosenImage //4
+        dismissViewControllerAnimated(true, completion: nil) //5
+    }
+    //What to do if the image picker cancels.
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func noCamera(){
+        let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
+        alertVC.addAction(okAction)
+        presentViewController(alertVC, animated: true, completion: nil)
     }
     
     
