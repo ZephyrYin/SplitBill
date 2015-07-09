@@ -31,6 +31,8 @@ class ScanBill:NSObject, G8TesseractDelegate{
         var items:[Item] = [Item]()
         
         for line in textArray{
+            println(count(line))
+            println(line)
             var tmp:[String] = split(line){$0 == " "}
             var left:String = "".join(tmp[0...tmp.count-2])
             var right:String = tmp[tmp.count-1]

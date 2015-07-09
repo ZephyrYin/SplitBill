@@ -99,8 +99,15 @@ class SplitBill:NSObject{
             }
         }
         var options:[Option] = [Option]()
+        
+        var record = [Int: Int]()
         for c in combinations{
-            options.append(Option(names: self.names, originalPrices: shouldPay, payMoney: c))
+            var total = c.reduce(0, combine: +)
+            println(total)
+            if record[total] == nil{
+                options.append(Option(names: self.names, originalPrices: shouldPay, payMoney: c))
+                record[total] = 1
+            }
         }
         return options
     }
