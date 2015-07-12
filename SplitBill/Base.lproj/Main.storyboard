@@ -30,9 +30,9 @@
                                     <action selector="sliderValueChanged:" destination="mfO-Jk-Z3y" eventType="valueChanged" id="5Ut-0e-a2c"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOz-hZ-WqJ">
-                                <rect key="frame" x="144" y="422" width="31" height="30"/>
-                                <state key="normal" title="Split">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOz-hZ-WqJ">
+                                <rect key="frame" x="131" y="422" width="56" height="30"/>
+                                <state key="normal" title="Split Bill">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -46,8 +46,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppW-uQ-rrv">
-                                <rect key="frame" x="143" y="331" width="35" height="30"/>
-                                <state key="normal" title="Scan">
+                                <rect key="frame" x="121" y="331" width="79" height="30"/>
+                                <state key="normal" title="Scan Ricipt">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

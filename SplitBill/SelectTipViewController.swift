@@ -23,7 +23,7 @@ class SelectTipViewController: UIViewController, UIImagePickerControllerDelegate
         } else {
             noCamera()
         }
-
+        //self.billImg = UIImage(named: "yrpxg.jpg")!
     }
     
     @IBOutlet var tipText: UILabel!

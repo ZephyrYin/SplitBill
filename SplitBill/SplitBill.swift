@@ -73,7 +73,7 @@ class SplitBill:NSObject{
             print(option.payMoney)
             println("\(option.totalPay) \(option.overFlow)")
         }
-        return Array(options[0...9])
+        return Array(options)
     }
     
     func GetCombinations(shouldPay:[Float]) -> [Option]{

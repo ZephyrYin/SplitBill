@@ -34,6 +34,9 @@ class ScanBill:NSObject, G8TesseractDelegate{
             println(count(line))
             println(line)
             var tmp:[String] = split(line){$0 == " "}
+            if tmp.count < 2{
+                continue
+            }
             var left:String = "".join(tmp[0...tmp.count-2])
             var right:String = tmp[tmp.count-1]
             var replaced = String(map(right.generate()) {
