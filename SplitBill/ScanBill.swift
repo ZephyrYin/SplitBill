@@ -21,7 +21,7 @@ class ScanBill:NSObject, G8TesseractDelegate{
     }
     
     func getPriceFromImg(img:UIImage) -> [Item]{
-        var dValue = Default()
+        var dValue = DefaultValue()
         var minFilterPrice:Int = dValue.GetMinFilterPrice()
         var maxFilterPrice:Int = dValue.GetMaxFilterPrice()
         self.tesseract.image = img.g8_blackAndWhite()

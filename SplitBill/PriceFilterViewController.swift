@@ -31,7 +31,7 @@ class PriceFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     @IBOutlet var minimumPricePicker: UIPickerView!
     @IBOutlet var maximumPricePicker: UIPickerView!
-    var defaultValue: Default = Default()
+    var defaultValue: DefaultValue = DefaultValue()
     
     var pickerDataSource:[Int] = [Int]()
     

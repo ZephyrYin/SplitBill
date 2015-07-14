@@ -29,7 +29,7 @@ class SelectTipViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet var tipText: UILabel!
     @IBOutlet var tipSlider: UISlider!
     @IBOutlet var sliderValeLabel: UILabel!
-    var dValue:Default = Default()
+    var dValue:DefaultValue = DefaultValue()
     var tipRatio:Float = 0.15
     var billImg:UIImage = UIImage()
     let picker = UIImagePickerController()

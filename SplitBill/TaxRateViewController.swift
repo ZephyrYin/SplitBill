@@ -22,12 +22,13 @@ class TaxRateViewController: UIViewController, G8TesseractDelegate {
             
             self.presentViewController(alertController, animated: true, completion: nil)
         }else{
+            println("saved tax: \((self.taxText.text as NSString).floatValue)")
             defaultValue.SetTaxRate((self.taxText.text as NSString).floatValue)
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
     @IBOutlet var taxText: UITextField!
-    var defaultValue:Default = Default()
+    var defaultValue:DefaultValue = DefaultValue()
     
     override func viewDidLoad() {
         super.viewDidLoad()

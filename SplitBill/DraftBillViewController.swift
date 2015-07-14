@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DraftBillViewController:UIViewController, UITableViewDataSource, UITableViewDelegate{
+class DraftBillViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
     
     
     @IBOutlet var tableView: UITableView!
@@ -80,7 +80,7 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
             cell.nameText.text = self.items[index].name
             cell.priceText.text = NSString(format: "%.2f", self.items[index].price) as String
         }
-        //cell.priceText.delegate = self
+        cell.priceText.delegate = self
         cell.priceText.tag = index
         self.mycells.append(cell)
         return cell
@@ -132,6 +132,7 @@ class DraftBillViewController:UIViewController, UITableViewDataSource, UITableVi
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
         self.items[textField.tag].price = (textField.text as NSString).floatValue
+        println(self.items[textField.tag].price)
         println("edit \(textField.tag) to \((textField.text as NSString).floatValue)")
         return true
     }

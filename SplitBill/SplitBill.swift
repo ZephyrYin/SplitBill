@@ -34,22 +34,24 @@ struct Option{
 
 
 class SplitBill:NSObject{
+    var dV:DefaultValue
     var orignialPrices:[Float]
     var taxRate:Float
+    var tipRatio:Float
     var names:[String]
     
     override init(){
+        self.dV = DefaultValue()
         self.orignialPrices = [Float]()
-        self.taxRate = 1.0
+        self.taxRate = self.dV.GetTaxRate()
+        self.tipRatio = self.dV.GetDefaultTip()
+        println("tax: \(self.taxRate)")
+        println("tip: \(self.tipRatio)")
         self.names = [String]()
     }
     
     func SetOriginalPrice(prices:[Float]){
         self.orignialPrices = prices
-    }
-    
-    func SetTaxRate(r:Float){
-        self.taxRate = r
     }
     
     func SetNames(n:[String]){
@@ -61,7 +63,7 @@ class SplitBill:NSObject{
     }
     
     func Split() -> [Option]{
-        var shouldPay:[Float] = self.orignialPrices.map{return $0*(1+self.taxRate*2)}
+        var shouldPay:[Float] = self.orignialPrices.map{return $0*(1+self.taxRate + self.tipRatio)}
         println(shouldPay)
         var total:Float = shouldPay.reduce(0, combine: +)
         println("whole price : \(total)")

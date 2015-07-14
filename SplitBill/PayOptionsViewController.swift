@@ -30,7 +30,6 @@ class PayOptionsViewController:UIViewController, UITableViewDataSource, UITableV
         }
         sB.SetNames(items.map({$0.name}))
         sB.SetOriginalPrice(items.map({$0.price}))
-        sB.SetTaxRate(0.0875)
         self.options = sB.Split()
         self.tableView.delegate = self
         self.tableView.dataSource = self

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Default:NSObject{
+class DefaultValue:NSObject{
     var tipRatio:Float
     var maxFilterPrice:Int
     var minFilterPrice:Int
