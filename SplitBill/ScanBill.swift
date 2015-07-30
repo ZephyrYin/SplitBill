@@ -21,6 +21,10 @@ class ScanBill:NSObject, G8TesseractDelegate{
     }
     
     func getPriceFromImg(img:UIImage) -> [Item]{
+        var items:[Item] = [Item]()
+        if(img.size.width == 0 || img.size.height == 0){
+            return items
+        }
         var dValue = DefaultValue()
         var minFilterPrice:Int = dValue.GetMinFilterPrice()
         var maxFilterPrice:Int = dValue.GetMaxFilterPrice()
@@ -28,7 +32,7 @@ class ScanBill:NSObject, G8TesseractDelegate{
         self.tesseract.recognize();
         print(self.tesseract.recognizedText)
         var textArray = split(tesseract.recognizedText){$0 == "\n"}
-        var items:[Item] = [Item]()
+        
         
         for line in textArray{
             println(count(line))
@@ -39,9 +43,8 @@ class ScanBill:NSObject, G8TesseractDelegate{
             }
             var left:String = "".join(tmp[0...tmp.count-2])
             var right:String = tmp[tmp.count-1]
-            var replaced = String(map(right.generate()) {
-                $0 == "," ? "." : $0
-                })
+            var replaced = right.stringByReplacingOccurrencesOfString(",", withString: ".", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            replaced = replaced.stringByReplacingOccurrencesOfString("$", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
             var price:Float = (replaced as NSString).floatValue
             if Int(price) >= minFilterPrice && Int(price) <= maxFilterPrice{
                 var item:Item = Item(name: left, price: (replaced as NSString).floatValue)

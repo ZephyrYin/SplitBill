@@ -23,7 +23,6 @@ class SelectTipViewController: UIViewController, UIImagePickerControllerDelegate
         } else {
             noCamera()
         }
-        //self.billImg = UIImage(named: "yrpxg.jpg")!
     }
     
     @IBOutlet var tipText: UILabel!
@@ -33,6 +32,7 @@ class SelectTipViewController: UIViewController, UIImagePickerControllerDelegate
     var tipRatio:Float = 0.15
     var billImg:UIImage = UIImage()
     let picker = UIImagePickerController()
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -54,8 +54,6 @@ class SelectTipViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "settip" {
-           
-            println(" get set action \(self.tipRatio)")
             dValue.SetDefaultTip(self.tipRatio)
             let destinationVC:DraftBillViewController = segue.destinationViewController as! DraftBillViewController
             destinationVC.tipRatio = self.tipRatio
@@ -75,6 +73,13 @@ class SelectTipViewController: UIViewController, UIImagePickerControllerDelegate
     
     func noCamera(){
         let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
+        alertVC.addAction(okAction)
+        presentViewController(alertVC, animated: true, completion: nil)
+    }
+    
+    func noImg(){
+        let alertVC = UIAlertController(title: "No Image", message: "Please scan bill first", preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
         alertVC.addAction(okAction)
         presentViewController(alertVC, animated: true, completion: nil)
