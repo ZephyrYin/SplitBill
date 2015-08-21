@@ -10,19 +10,17 @@
 		CE1FE84E1B2FE33300DC0F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE84D1B2FE33300DC0F22 /* AppDelegate.swift */; };
 		CE1FE8501B2FE33300DC0F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE84F1B2FE33300DC0F22 /* ViewController.swift */; };
 		CE1FE8531B2FE33300DC0F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1FE8511B2FE33300DC0F22 /* Main.storyboard */; };
-		CE1FE8551B2FE33300DC0F22 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FE8541B2FE33300DC0F22 /* Images.xcassets */; };
 		CE1FE8581B2FE33300DC0F22 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */; };
 		CE1FE8641B2FE33300DC0F22 /* SplitBillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE8631B2FE33300DC0F22 /* SplitBillTests.swift */; };
 		CE1FE86E1B2FE36200DC0F22 /* SplitBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */; };
 		CE39588A1B4CFA1A005AD348 /* bitcoin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3958881B4CFA1A005AD348 /* bitcoin@2x.png */; };
 		CE39588B1B4CFA1A005AD348 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3958891B4CFA1A005AD348 /* settings@2x.png */; };
-		CE3958931B4CFE21005AD348 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3958921B4CFE21005AD348 /* icon.png */; };
 		CE3DF1BE1B411C1400FDA788 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */; };
 		CE3DF1C01B411C6000FDA788 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */; };
 		CE5CDD2D1B43D06900C46389 /* PriceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDD2C1B43D06900C46389 /* PriceFilterViewController.swift */; };
 		CE5CDD321B43DA1400C46389 /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDD311B43DA1400C46389 /* Default.swift */; };
 		CE5CDD641B43E58400C46389 /* TaxRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CDD631B43E58400C46389 /* TaxRateViewController.swift */; };
-		CE761C151B5216A300193C9E /* yrpxg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE761C141B5216A300193C9E /* yrpxg.jpg */; };
+		CE7F08E61B805C130077E4D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7F08E51B805C130077E4D9 /* Images.xcassets */; };
 		CECD3A451B3BDB3600C5A283 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A441B3BDB3600C5A283 /* tessdata */; };
 		CECD3A471B3BDC1D00C5A283 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = CECD3A461B3BDC1D00C5A283 /* Images */; };
 		CECE5BF81B3D01F1004697A8 /* ScanBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5BF71B3D01F1004697A8 /* ScanBill.swift */; };
@@ -52,7 +50,6 @@
 		CE1FE84D1B2FE33300DC0F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1FE84F1B2FE33300DC0F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE1FE8521B2FE33300DC0F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE1FE8541B2FE33300DC0F22 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE1FE8571B2FE33300DC0F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CE1FE85D1B2FE33300DC0F22 /* SplitBillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitBillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1FE8621B2FE33300DC0F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,13 +57,12 @@
 		CE1FE86D1B2FE36200DC0F22 /* SplitBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitBill.swift; sourceTree = "<group>"; };
 		CE3958881B4CFA1A005AD348 /* bitcoin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bitcoin@2x.png"; sourceTree = "<group>"; };
 		CE3958891B4CFA1A005AD348 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
-		CE3958921B4CFE21005AD348 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CE3DF1BD1B411C1400FDA788 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CE3DF1BF1B411C6000FDA788 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		CE5CDD2C1B43D06900C46389 /* PriceFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceFilterViewController.swift; sourceTree = "<group>"; };
 		CE5CDD311B43DA1400C46389 /* Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
 		CE5CDD631B43E58400C46389 /* TaxRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxRateViewController.swift; sourceTree = "<group>"; };
-		CE761C141B5216A300193C9E /* yrpxg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yrpxg.jpg; sourceTree = "<group>"; };
+		CE7F08E51B805C130077E4D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CECD3A401B3BDA1F00C5A283 /* SplitBill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitBill-Bridging-Header.h"; sourceTree = "<group>"; };
 		CECD3A441B3BDB3600C5A283 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		CECD3A461B3BDC1D00C5A283 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
@@ -110,7 +106,6 @@
 		CE1FE83F1B2FE33200DC0F22 = {
 			isa = PBXGroup;
 			children = (
-				CE3958921B4CFE21005AD348 /* icon.png */,
 				CE3958881B4CFA1A005AD348 /* bitcoin@2x.png */,
 				CE3958891B4CFA1A005AD348 /* settings@2x.png */,
 				CECD3A461B3BDC1D00C5A283 /* Images */,
@@ -151,9 +146,8 @@
 				CE5CDD311B43DA1400C46389 /* Default.swift */,
 				CE5CDD631B43E58400C46389 /* TaxRateViewController.swift */,
 				CECE5C011B3D1CC1004697A8 /* SelectTipViewController.swift */,
-				CE761C141B5216A300193C9E /* yrpxg.jpg */,
-				CE1FE8541B2FE33300DC0F22 /* Images.xcassets */,
 				CE1FE8561B2FE33300DC0F22 /* LaunchScreen.xib */,
+				CE7F08E51B805C130077E4D9 /* Images.xcassets */,
 				CE1FE84B1B2FE33300DC0F22 /* Supporting Files */,
 			);
 			path = SplitBill;
@@ -275,15 +269,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE761C151B5216A300193C9E /* yrpxg.jpg in Resources */,
+				CE7F08E61B805C130077E4D9 /* Images.xcassets in Resources */,
 				CECD3A471B3BDC1D00C5A283 /* Images in Resources */,
 				CE1FE8531B2FE33300DC0F22 /* Main.storyboard in Resources */,
 				CE39588B1B4CFA1A005AD348 /* settings@2x.png in Resources */,
 				CECD3A451B3BDB3600C5A283 /* tessdata in Resources */,
-				CE3958931B4CFE21005AD348 /* icon.png in Resources */,
 				CE39588A1B4CFA1A005AD348 /* bitcoin@2x.png in Resources */,
 				CE1FE8581B2FE33300DC0F22 /* LaunchScreen.xib in Resources */,
-				CE1FE8551B2FE33300DC0F22 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +467,7 @@
 			baseConfigurationReference = 71FF57E1EFD6CCE169530162 /* Pods-SplitBill.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -492,6 +485,7 @@
 			baseConfigurationReference = E5626467CDF9A7BA505A9B13 /* Pods-SplitBill.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
